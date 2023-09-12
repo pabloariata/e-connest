@@ -1,0 +1,17 @@
+version: '3'
+services:
+  database:
+    image: postgres:13
+    restart: always
+    container_name: e-connest-db-dev
+    environment:
+      - POSTGRES_USER=${POSTGRESQL_USER}
+      - POSTGRES_PASSWORD=${POSTGRESQL_PASSWORD}
+      - POSTGRES_DB=${POSTGRESQL_DB}
+    ports:
+      - '5432:5432'
+    volumes:
+      - e-connest-data:/var/lib/postgresql/data
+volumes:
+  e-connest-data:
+    external: true
