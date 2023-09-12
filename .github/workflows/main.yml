@@ -1,6 +1,6 @@
 name: Run Tests
 
-on: [pull_request]  # Ejecutar cuando haya un push al repositorio
+on: [pull_request]  # Ejecutar en un PR
 
 jobs:
   build:
