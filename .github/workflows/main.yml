@@ -1,17 +1,17 @@
 name: Run Tests
 
-on: [pull_request]  # Ejecutar en un PR
+on: [pull_request]  # En cada PR
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Puedes cambiar a otra plataforma si es necesario
+    runs-on: ubuntu-latest  # Plataforma del runner
 
     steps:
     - name: Checkout código
-      uses: actions/checkout@v2  # Comando para clonar el repositorio
+      uses: actions/checkout@v2  # Clona el repositorio
 
     - name: Instalar dependencias
-      run: npm install  # Instalar dependencias de npm
+      run: npm install  # Instala las npm dependencies
 
     - name: Ejecutar pruebas
-      run: npm run test  # Ejecutar el comando "npm run test"
+      run: npm run test  # Ejecuta las pruebas
