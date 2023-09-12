@@ -31,6 +31,19 @@
 ```bash
 $ npm install
 ```
+## Development
+
+### Docker
+
+
+First, create e-connest-data volume: 
+```
+$ docker volume create e-connest-data
+```
+```
+$ docker compose up -d
+```
+
 
 ## Running the app
 
