@@ -1,0 +1,17 @@
+name: Run Tests
+
+on: [pull_request]  # Ejecutar cuando haya un push al repositorio
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Puedes cambiar a otra plataforma si es necesario
+
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v2  # Comando para clonar el repositorio
+
+    - name: Instalar dependencias
+      run: npm install  # Instalar dependencias de npm
+
+    - name: Ejecutar pruebas
+      run: npm run test  # Ejecutar el comando "npm run test"
